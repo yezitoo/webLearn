@@ -1,0 +1,765 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*pc端显示，手机端隐藏*/
+
+@media screen and (min-width:1024px) {
+    header,
+    article,
+    footer {
+        display: block;
+    }
+    .mobile,.container,.over{
+        display: none;
+    }
+    /*对body进行相对定位，使浏览器自由伸缩时，布局不会出现混乱*/
+    body {
+        position: relative;
+        min-width: 800px;
+        min-height: 600px;
+        height: 100%;
+    }
+    html {
+        height: 100%;
+    }
+    header {
+        height: 100px;
+    }
+    article {
+        position: relative;
+        height: 200px;
+        top: 35px;
+    }
+    footer {
+        width: 630px;
+        height: 100px;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -315px;
+    }
+    .menu1 {
+        position: absolute;
+        right: 0;
+        top: 15px;
+    }
+    /*设置一级菜单的样式*/
+    .menu1>li {
+        float: left;
+        list-style: none;
+        /*去除圆点样式*/
+        margin-left: 20px;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+    .menu1>li>a {
+        color: black;
+        font-size: 13px;
+    }
+    .menu1>li>a:hover {
+        color: blue;
+    }
+    .menu1 li:nth-child(7) {
+        font-weight: normal;
+    }
+    .menu1 li:nth-child(8) {
+        position: relative;
+        font-weight: normal;
+    }
+    .menu1 li:nth-child(9) {
+        position: relative;
+    }
+    .menu1 li:nth-child(9) a {
+        color: white;
+        background-color: #3385ff;
+        padding: 5px 5px;
+    }
+    .menu1 li:nth-child(9):hover a {
+        color: black;
+        background-color: white;
+    }
+    /*设置鼠标滑过显示二级菜单*/
+    .menu1>li:nth-child(8):hover ul.menu1-1 {
+        display: block;
+    }
+    .menu1>li:nth-child(9):hover ul.menu1-2 {
+        display: block;
+    }
+    /*设置二级菜单的样式和位置*/
+    .menu1-1 {
+        list-style: none;
+        display: none;
+        position: absolute;
+        border: 1px solid #CBC7C7;
+        left: -19px;
+        /*边框相对于relative移动*/
+        top: 27px;
+        padding: 0;
+        /*去除ul下面的边框内边距，使其与li边框同步*/
+    }
+    .menu1-2 {
+        list-style: none;
+        display: none;
+        position: absolute;
+        border: 1px solid #CBC7C7;
+        border-top-color: transparent;
+        left: -1px;
+        top: 18px;
+        padding: 0;
+        width: 70px;
+        z-index: 99;
+    }
+    .menu1-1 li {
+        text-align: center;
+        font-size: 12px;
+    }
+    /*设置文字样式*/
+    .menu1-1 li a {
+        text-decoration: none;
+        padding: 5px 8px;
+        display: block;
+        color: black;
+        font-weight: normal;
+        height: 20px;
+        line-height: 20px;
+        width: 50px;
+    }
+    /*设置鼠标滑过文字的样式*/
+    .menu1-1 li:hover a {
+        color: white;
+        background-color: cornflowerblue;
+    }
+    /*设置背景图片样式*/
+    .menu1-2 span {
+        display: inline-block;
+        width: 37px;
+        height: 37px;
+    }
+    .menu1-2 .x {
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: #f1ebeb;
+        margin: 10px auto;
+    }
+    .menu1-2 a {
+        color: black;
+        font-weight: normal;
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .menu1-2 li:hover {
+        text-decoration: underline;
+    }
+    .menu1-2 .cp {
+        text-decoration: underline;
+    }
+    .menu1-2 li {
+        text-align: center;
+        margin-top: 15px;
+        cursor: pointer;
+        height: 81px;
+    }
+    /*设置第二个二级菜单中图片的位置*/
+    .menu1-2 li:nth-child(1) span {
+        background: url(../images/1.png);
+        background-position: 182px 0;
+    }
+    .menu1-2 li:nth-child(2) span {
+        background: url(../images/1.png);
+        background-position: 144px -1px;
+    }
+    .menu1-2 li:nth-child(3) span {
+        background: url(../images/1.png);
+        background-position: 220px 0;
+    }
+    .menu1-2 li:nth-child(4) span {
+        background: url(../images/1.png);
+        background-position: 109px 0;
+    }
+    .menu1-2 li:nth-child(5) span {
+        background: url(../images/1.png);
+        background-position: 72px 0;
+    }
+    .menu1-2 li:nth-child(6) span {
+        background: url(../images/1.png);
+        background-position: 37px 0;
+    }
+    /*设置最后*/
+    #more_pro {
+        width: 70px;
+        text-align: center;
+        border-bottom-color: transparent;
+        /*边框颜色设为无*/
+        border-top-color: transparent;
+        line-height: 20px;
+    }
+    /*设置百度图片的样式和位置*/
+    .bd {
+        text-align: center;
+    }
+    .bd img {
+        width: 270px;
+        height: 129px;
+    }
+    /*设置两个输入框的样式*/
+    .sc {
+        height: 100px;
+        position: relative;
+    }
+    form {
+        position: absolute;
+        left: 50%;
+        margin-left: -300px;
+    }
+    .sc1 {
+        width: 500px;
+        height: 35px;
+        border: 1px solid #d4cccc;
+        padding-left:5px;
+    }
+    .sc2 {
+        width: 100px;
+        height: 38px;
+        color: white;
+        font-size: 14px;
+        background-color: #3385ff;
+        border: 1px solid #2d78f4;
+        padding: 5px 8px;
+    }
+    input {
+        float: left;
+        /*是两个input中间无间隙*/
+    }
+    .camera {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 11px;
+        right: 104px;
+        background: url(../images/camera.png);
+        background-position: 0 0;
+    }
+    .camera:hover {
+        background-position: 0 20px;
+    }
+    /*设置尾部样式*/
+    .code1 {
+        font-size: 11px;
+        float: left;
+        width: 280px;
+    }
+    .script {
+        width: 336px;
+        display: inline-block;
+        /*设置行内块级元素*/
+        float: left;
+        font-size: 11px;
+        color: #999;
+    }
+    .script a {
+        color: #999;
+    }
+    .code-bd {
+        width: 60px;
+        height: 60px;
+        background: url(../images/code-bd.png);
+    }
+    .code-nm {
+        width: 60px;
+        height: 60px;
+        background: url(../images/code-nm.png);
+        margin-left: 50px;
+    }
+    .code-bdt,
+    .code-bd,
+    .code-nm,
+    .code-nmt {
+        display: inline-block;
+        float: left;
+        /*左浮动*/
+    }
+    .code-bdt,
+    .code-nmt {
+        text-align: center;
+        line-height: 30px;
+    }
+}
+
+
+/*移动端显示，PC端隐藏*/
+
+@media screen and (max-width:1023px) {
+    header,
+    article,
+    footer {
+        display: none;
+    }
+    .mobile,.container,.over{
+        display: block;
+    }
+    @font-face {
+        font-family: "iconfont";
+        src: url('../iphone/iconfont.eot?t=1471513406');
+        /* IE9*/
+        src: url('../iphone/iconfont.eot?t=1471513406#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('../iphone/iconfont.woff?t=1471513406') format('woff'), /* chrome, firefox */
+        url('../iphone/iconfont.ttf?t=1471513406') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        url('../iphone/iconfont.svg?t=1471513406#iconfont') format('svg');
+        /* iOS 4.1- */
+    }
+    .mobile {
+        width: 100%;
+        height: 40px;
+        background: #efefef;
+        color: gray;
+    }
+    .nav {
+        float: right;
+        width: 30%;
+        height: 40px;
+        padding-top: 12px;
+    }
+    .nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .people {
+        font-family: "iconfont";
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        padding-left: 33px;
+        color: gray;
+    }
+    .skin {
+        font-family: "iconfont";
+        font-size: 22px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        padding-left: 9px;
+        color: gray;
+    }
+    .weather {
+        font-family: "iconfont";
+        font-size: 26px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    .sharp {
+        font-family: "iconfont";
+        font-size: 15px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        margin-left: -11px;
+    }
+    .left {
+        width: 40%;
+        height: 40px;
+        float: left;
+        padding-top: 7px;
+    }
+    .temperature {
+        font-size: 20px;
+    }
+    .text {
+        display: inline-block;
+        width: 40px;
+        font-size: 9px;
+        margin-left: -14px;
+    }
+    /*手机端container部分*/
+    .container {
+        position: relative;
+        background: #efefef;
+        height: 300px;
+    }
+    .bd {
+        position: relative;
+        width: 100%;
+        height: 108px;
+    }
+    .bd img {
+        width: 176px;
+        height: 56px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -9px;
+        margin-left: -88px;
+    }
+    form {
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 10px;
+    }
+    .sc1 {
+        width: 75%;
+        height: 35px;
+        border: 1px solid #d4cccc;
+    }
+    .sc2 {
+        width: 23%;
+        height: 38px;
+        color: white;
+        font-size: 14px;
+        background-color: #3385ff;
+        border: 1px solid #2d78f4;
+    }
+    input {
+        float: left;
+        /*是两个input中间无间隙*/
+    }
+    .sound {
+        font-family: "iconfont";
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        color: gray;
+        top: 126px;
+        left: 64%;
+    }
+    .horn {
+        font-family: "iconfont";
+        font-size: 20px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        position: absolute;
+        color: gray;
+        top: 126px;
+        left: 68%;
+    }
+    .nav2>a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        width: 31px;
+        height: 40px;
+        /*margin-left: 20px;*/
+    }
+    .nav2 {
+        margin-top: 64px;
+    }
+    .news,
+    .novel,
+    .video,
+    .rice,
+    .map,
+    .more {
+        font-family: "iconfont";
+        font-size: 21px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        padding-left: 9px;
+        color: gray;
+    }
+    .nav2 a:nth-child(1) {
+        padding-left: 22px;
+    }
+    .nav2{
+        width:90%;
+        display:-webkit-flex;
+        display:flex;
+        -webkit-justify-content:space-between;
+        justify-content: space-between;
+        flex-wrap:nowrap;
+    }
+    .nav2 p {
+        line-height: 33px;
+        text-align: center;
+        font-size: 6px;
+        padding-left: 7px;
+    }
+    .switch {
+        margin-top: 50px;
+    }
+    .switch span:nth-child(1) {
+        margin-left: 26%;
+    }
+    .switch span:nth-child(2) {
+        margin-left: 10%;
+    }
+    .switch span:nth-child(3) {
+        margin-left: 10%;
+    }
+    .spot {
+        font-family: "iconfont" !important;
+        font-size: 22px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: gray;
+        margin-right: 20px;
+        float: right;
+    }
+    .nav3 {
+        margin-top: 25px;
+        font-size: 16px;
+        margin-left: 24px;
+        color: gray;
+    }
+    .shi {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: gray;
+    }
+    table {
+        border-collapse: collapse;
+        font-size: 16px;
+        border-color: #f1f1f1;
+        text-align: center;
+    }
+    table a {
+        text-decoration: none;
+        color: gray;
+    }
+    td.black {
+        color: black;
+        font-weight: bolder;
+    }
+    .line {
+        width: 100%;
+        height: 7px;
+        background: #efefef;
+    }
+    .service {
+        margin-top: 13px;
+        font-size: 16px;
+        margin-left: 24px;
+        color: gray;
+    }
+    .line1 {
+        width: 100%;
+        height: 1px;
+        background: #efefef;
+        margin-top: 6px;
+    }
+    .location-icon {
+        font-family: "iconfont" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: gray;
+    }
+    .location span:nth-child(1) {
+        margin-left: 20px;
+    }
+    .location span:nth-child(2) {
+        display: inline-block;
+        width: 60px;
+        height: 25px;
+        border: 1px solid #d2cfcf;
+        text-align: center;
+        float: right;
+        margin-right: 29px;
+        line-height: 25px;
+    }
+    .location {
+        margin-top: 15px;
+    }
+    .film,
+    .nuo,
+    .parcel,
+    .taxi,
+    .hotel,
+    .food,
+    .ktv,
+    .charge {
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: white;
+    }
+    .picture {
+        margin-top: 20px;
+        width: 100%;
+        height: 60%;
+    }
+    .picture1 ul li {
+        float: left;
+        list-style: none;
+        width: 80px;
+        height: 100px;      
+    }
+    .picture1 ul{
+         display:flex;
+        display:-webkit-flex;
+        justify-content:space-between;
+        -webkit-justify-content:space-between;
+        -webkit-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+        margin-left:-10px;
+    }
+    .picture2 ul li{
+        float: left;
+        list-style: none;
+        width: 80px;
+        height: 80px;    
+    }
+    .picture2 ul{
+        display:flex;
+        display:-webkit-flex;
+        justify-content:space-between;
+        -webkit-justify-content:space-between;
+        -webkit-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+        margin-left:-10px;
+    }
+    .picture1 li a {
+        text-decoration: none;
+        text-align: center;
+        width:90px;
+        height:80px;
+    }
+    .picture2 li a {
+        text-decoration: none;
+        text-align: center;
+        width:90px;
+        height:80px;
+    }
+    li p {
+        margin-top: 5px;
+        color: black;
+    }
+    .picture1 div {
+        width: 50%;
+        height: 40%;
+        margin-left:27px;
+    }
+    .picture2 div {
+        width: 50%;
+        height: 50%;
+        margin-left: 27px;
+    }
+    div i {
+        line-height: 145%;
+    }
+    .film1 {
+        border-radius: 50%;
+        background: #b493db;
+    }
+    .nuo1 {
+        border-radius: 50%;
+        background: #ff6fbf;
+    }
+    .parcel1 {
+        border-radius: 50%;
+        background: #ff6b70;
+    }
+    .taxi1 {
+        border-radius: 50%;
+        background: #93a4b3;
+    }
+    .hotel1 {
+        border-radius: 50%;
+        background: #6f99de;
+    }
+    .food1 {
+        border-radius: 50%;
+        background: #ffa868;
+    }
+    .ktv1 {
+        border-radius: 50%;
+        background: #b493db;
+    }
+    .charge1 {
+        border-radius: 50%;
+        background: #ff6b70;
+    }
+    .open {
+        text-align: center;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+    }
+    .line3 {
+        width: 100%;
+        height: 7px;
+        background: #efefef;
+    }
+    .manage {
+        text-align: center;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+    }
+    .hot {
+        font-family: "iconfont" !important;
+        font-size: 25px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+        color: red;
+    }
+    /*手机端尾部over样式*/
+    .over {
+        width: 100%;
+        height: 30%;
+        margin-top: 550px;
+        background: #efefef;
+    }
+    .over a {
+        display: block;
+        text-decoration: none;
+        color: gray;
+        font-size: 13px;
+        margin-left: 20px;
+    }
+    .bdbj {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/w_icon2.png);
+        background-size: 20px 20px;
+    }
+    .tickling {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: url(../images/yh.png);
+        background-size: 20px 20px;
+    }
+    .tickling1,
+    .icp,
+    .jing {
+        text-align: center;
+        margin-top: 18px;
+    }
+    .police {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background: url(../images/icon_police.png);
+        background-size: 18px 18px;
+    }
+}
